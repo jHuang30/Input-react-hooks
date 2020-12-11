@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState }from 'react';
+import ShowInput from './pages/ShowInput'
 
 function App() {
+  const value1 = false
+  const value2 = ['apple', 'pear', 'banana']
+  const value3 = 'anything'
+  const[input, setInput] = useState(value1);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      Choose from below: 
+      <br />
+      <br />
+      <button onClick={(e) => setInput(value1)}>Falsy Value</button>
+      <br />
+      <br />
+      <button onClick={(e) => setInput(value2)}>An Array</button>
+      <br />
+      <br />
+      <button onClick={(e) => setInput(value3)}>Anything Else</button>
+      <br />
+      <br />
+      <ShowInput input={input}/>
+    </>
   );
 }
 
