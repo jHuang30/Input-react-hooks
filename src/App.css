@@ -1,0 +1,23 @@
+.wrapper {
+    max-width: 1440px;
+    padding: 48px 96px 104px 96px;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 4px 8px;
+    background-color: #7FC3CB;
+    border: none;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px rgb(168, 167, 167);
+}
+
+.button:focus {
+    outline: none;
+    border: none;
+    color: rgba(129, 24, 161, 0.794);
+}
+
